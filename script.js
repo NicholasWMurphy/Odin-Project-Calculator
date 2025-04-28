@@ -28,3 +28,20 @@ function operate (operator, a, b) {
 }
 
 console.log(operate(subtract, 5, 5))
+
+const btn = document.querySelectorAll("button");
+const display = document.querySelector("#display-numbers");
+
+window.onload = function() {
+    display.textContent = '0';
+}
+
+//pressing a button to update the display
+
+btn.forEach((button) => {
+    button.addEventListener("click", () => {
+        display.textContent = button.textContent;
+    })
+})
+
+
