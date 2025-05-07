@@ -34,6 +34,7 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 8rem;
     text-align: right;
+    overflow: hidden;
     
 }
 
@@ -67,7 +68,7 @@ body {
     
 }
 
-.button {
+.button, .operator {
     
     align-items: center;
     background-color: blanchedalmond;
@@ -86,7 +87,7 @@ body {
 
 
 
-.button:last-child {
+.operator:last-child {
     flex-grow: 2;
     background-color: darkblue;  
     color: white; 
