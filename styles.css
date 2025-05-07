@@ -68,7 +68,7 @@ body {
     
 }
 
-.button, .operator {
+.button, .operator, .equals {
     
     align-items: center;
     background-color: blanchedalmond;
@@ -87,7 +87,7 @@ body {
 
 
 
-.operator:last-child {
+.equals {
     flex-grow: 2;
     background-color: darkblue;  
     color: white; 
