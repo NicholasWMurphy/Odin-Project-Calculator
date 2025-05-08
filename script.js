@@ -36,7 +36,7 @@ console.log(operate(subtract, 5, 4))
 const btn = document.querySelectorAll(".button");
 const displayNumbers = document.querySelector("#display-numbers");
 const operatorButton = document.querySelectorAll(".operator");
-const equals = document.querySelectorAll(".equals");
+const equals = document.querySelector(".equals");
 const clearButton = document.querySelector(".clear");
 const defaultZero = document.querySelector("#defaultZero");
 
@@ -77,8 +77,8 @@ clearButton.addEventListener("click", () => {
     console.log(operatorButtonClicked)
     operator = button.textContent;
     test = button.id;
-    displayNumbers.textContent = firstNumber + operator;
-
+    console.log(test);
+    displayNumbers.textContent +=  operator;
     })
     })
 
@@ -97,9 +97,30 @@ clearButton.addEventListener("click", () => {
 
 //when equals is pressed, it runs the previously made operate function
 
- equals.forEach((button) => {
-    button.addEventListener("click", () => {
-        console.log(operate(test, arr[0], arr[1]))
+    equals.addEventListener("click", () => {
+        if (test == 'add') {
+            displayNumbers.textContent = operate(add, arr[0], arr[1]) 
+        } else if (test == 'subtract') {
+            displayNumbers.textContent = operate(subtract, arr[0], arr[1])
+        } else if (test == 'multiply') {
+            displayNumbers.textContent = operate(multiply, arr[0], arr[1])
+        } else if (test == 'divide') {
+            displayNumbers.textContent = operate(divide, arr[0], arr[1])
+        }
+        operatorButtonClicked = false;
+        console.log(operatorButtonClicked);
+        firstNumber = displayNumbers.textContent;
+        console.log(firstNumber);
+    })
+    
+  
 
-    })
-    })
+  
+
+    
+  
+    
+    
+
+
+
