@@ -68,7 +68,7 @@ body {
     
 }
 
-.button, .operator, .equals {
+.button, .operator, .equals, .dot, .backspace {
     
     align-items: center;
     background-color: blanchedalmond;
@@ -98,7 +98,7 @@ body {
   color: white;
 }
 
-.operator {
+.operator, .backspace {
   background-color: grey;
   color: white;
 }
