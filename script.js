@@ -150,9 +150,16 @@ backspace.addEventListener("click", () => {
     }
     if (operatorButtonClicked == false) {
         firstNumber = firstNumber.substring(0, firstNumber.length - 1); 
+        if (!firstNumber.includes(decimal)) {
+            decimalPressed = false;
+        }
     } else {
         secondNumber = secondNumber.substring(0, secondNumber.length - 1);
+    } if (!secondNumber.includes(decimal)) {
+        decimalPressed = false;
     }
+
+    
 
 })
 
